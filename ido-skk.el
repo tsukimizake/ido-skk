@@ -40,7 +40,7 @@
 
 (defvar ido-skk-not-found-str "not found (辞書登録に入ります)")
 
-(defun skk-ido (orig-func &rest args)
+(defun ido-skk (orig-func &rest args)
   "An advice function to replace `skk-henkan-show-candidates'"
   (let ((res
 	 (ido-completing-read "SKK: "
@@ -57,8 +57,8 @@
   :init-value nil
   :lighter idoSKK
   (if ido-skk-mode
-      (advice-add 'skk-henkan-show-candidates :around 'skk-ido)
-    (advice-remove 'skk-henkan-show-candidates 'skk-ido)))
+      (advice-add 'skk-henkan-show-candidates :around 'ido-skk)
+    (advice-remove 'skk-henkan-show-candidates 'ido-skk)))
 
 
 
