@@ -1,0 +1,13 @@
+* ido-skk
+skkの候補選択のインターフェースとしてidoを使うようにアドバイスを噛ませてみました。
+ido-migemoと併用すると、その漢字の別の読み方を入力する事で絞り込むという、ありそうでなかった日本語入力ができるようになります。
+
+* インストール
+load-pathの通ったところにido-skk.elを置いて、init.elに
+#+begin_src elisp
+(require 'ido-skk)
+(ido-skk-mode t)
+#+end_src
+と書けば使えるようになります。
+
+特に不具合が無さそうならmelpaに上げるかもしれません。
