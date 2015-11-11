@@ -55,6 +55,7 @@
   "An advice function to replace `skk-henkan-show-candidates'"
   (ido-skk))
 
+;;;###autoload
 (define-minor-mode ido-skk-mode "ido for skk henkan."
   :init-value nil
   :lighter idoSKK
