@@ -25,7 +25,7 @@
 ;; ido-migemoと併用すると、その漢字の別の読み方を入力する事で絞り込むという、ありそうでなかった日本語入力ができるようになります。
 
 ;;; Usage:
-;; load-pathの通ったところにido-skk.elを置いて、init.elに
+;; init.elに
 
 ;; (require 'ido-skk)
 ;; (ido-skk-mode +1)
