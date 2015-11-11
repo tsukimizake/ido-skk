@@ -1,8 +1,8 @@
-;;; ido-skk --- ido interface for skk henkan
+;;; ido-skk.el --- ido interface for skk henkan
 
 ;; Author: tsukimizake <shomasd_at_gmail.com>
 ;; Version: 0.1
-;; Package-Requires: ((ddskk "20150912.1820"))
+;; Package-Requires: ((emacs "24.4") (ddskk "20150912.1820"))
 ;; Keywords: languages
 ;; URL: https://github.com/tsukimizake/ido-skk
 
@@ -28,7 +28,7 @@
 ;; load-pathの通ったところにido-skk.elを置いて、init.elに
 
 ;; (require 'ido-skk)
-;; (ido-skk-mode t)
+;; (ido-skk-mode +1)
 
 ;; と書けば使えるようになります。
 
@@ -55,6 +55,7 @@
   "An advice function to replace `skk-henkan-show-candidates'"
   (ido-skk))
 
+;;;###autoload
 (define-minor-mode ido-skk-mode "ido for skk henkan."
   :init-value nil
   :lighter idoSKK

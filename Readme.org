@@ -7,7 +7,7 @@ ido-migemoと併用すると、その漢字の別の読み方を入力する事�
 load-pathの通ったところにido-skk.elを置いて、init.elに
 #+begin_src elisp
 (require 'ido-skk)
-(ido-skk-mode t)
+(ido-skk-mode +1)
 #+end_src
 と書けば使えるようになります。
 
