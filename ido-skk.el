@@ -2,7 +2,7 @@
 
 ;; Author: tsukimizake <shomasd_at_gmail.com>
 ;; Version: 0.1
-;; Package-Requires: ((ddskk "20150912.1820"))
+;; Package-Requires: ((emacs "24.4") (ddskk "20150912.1820"))
 ;; Keywords: languages
 ;; URL: https://github.com/tsukimizake/ido-skk
 
