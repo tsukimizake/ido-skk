@@ -1,4 +1,4 @@
-;;; ido-skk --- ido interface for skk henkan
+;;; ido-skk.el --- ido interface for skk henkan
 
 ;; Author: tsukimizake <shomasd_at_gmail.com>
 ;; Version: 0.1
