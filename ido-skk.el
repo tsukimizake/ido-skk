@@ -40,7 +40,6 @@
 
 (defvar ido-skk-not-found-str "not found (辞書登録に入ります)")
 
-
 (defun ido-skk ()
   (let ((res
 	 (ido-completing-read "SKK: " (add-to-list 'skk-henkan-list ido-skk-not-found-str))))
@@ -54,17 +53,16 @@
 
 (defun ido-skk-henkan-show-candidates (orig-func &rest args)
   "An advice function to replace `skk-henkan-show-candidates'"
-  (if (skk-in-minibuffer-p) ; ミニバッファでの変換だとidoが動かないため元の関数を使う
-      (funcall orig-func)
-    (ido-skk)
-    ))
+  (ido-skk))
 
 (define-minor-mode ido-skk-mode "ido for skk henkan."
   :init-value nil
   :lighter idoSKK
   (if ido-skk-mode
-      (advice-add 'skk-henkan-show-candidates :around 'ido-skk-henkan-show-candidates)
-    (advice-remove 'skk-henkan-show-candidates 'ido-skk-henkan-show-candidates)))
+      (progn
+	(advice-add 'skk-henkan-show-candidates :around 'ido-skk-henkan-show-candidates)
+	(setq enable-recursive-minibuffers t))
+      (advice-remove 'skk-henkan-show-candidates 'ido-skk-henkan-show-candidates)))
 
 (provide 'ido-skk)
 
