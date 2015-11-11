@@ -28,7 +28,7 @@
 ;; load-pathの通ったところにido-skk.elを置いて、init.elに
 
 ;; (require 'ido-skk)
-;; (ido-skk-mode t)
+;; (ido-skk-mode +1)
 
 ;; と書けば使えるようになります。
 
